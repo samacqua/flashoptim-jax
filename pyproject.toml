@@ -1,0 +1,41 @@
+[project]
+name = "flashoptim-jax"
+version = "0.1.0"
+description = "JAX/Optax implementation of FlashOptim."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Sam Acquaviva" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+urls = { Homepage = "https://github.com/samacqua/flashoptim-jax" }
+dependencies = [
+    "jax",
+    "optax",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jax[cuda12]",
+    "matplotlib",
+    "torch",
+    "torchvision",
+    "datasets",
+    "flax",
+    "huggingface_hub",
+    "pytest",
+    "flash-attn-jax",
+    "einops",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["flashoptim_jax*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

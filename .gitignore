@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+*.egg-info/
+
+data/
+examples/out/*
+examples/out-final/*
+*.png
+!assets/*.png
+*.jsonl
+!examples/out-final/**/*.jsonl
+rand_notes
+dev_benchmarks
