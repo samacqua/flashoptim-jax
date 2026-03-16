@@ -51,16 +51,15 @@ OUTDIR="$ROOT_DIR/examples/out-final"
 
 case "$benchmark" in
   gpt2|gpt)
-    run_torch=false  # GPT-2 is JAX only
     jax_script="$ROOT_DIR/examples/train_gpt2_pretrain.py"
+    torch_script="$TORCH_ROOT_DIR/train_gpt2_pretrain.py"
     subdir="gpt2"
     : "${data_dir:=${DATA_DIR:-$HOME/data/fineweb10b-gpt2}}"
     optimizers=(adamw sgd lion)
     impls=(flash reference)
     skip_flash_adamw=true
     jax_args=(--data-dir "$data_dir" --batch-size 16 --steps 10000)
-    torch_args=()
-    torch_script=""
+    torch_args=(--data-dir "$data_dir" --batch-size 16 --steps 10000)
     torch_launcher=(python)
     ;;
   mnist)

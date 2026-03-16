@@ -37,8 +37,15 @@ import numpy as np
 import optax
 from huggingface_hub import snapshot_download
 
-from benchmark_utils import OPTIMIZERS, get_jax_flash_opt
-from example_utils import init_metrics_file, log_metrics, make_warmup_cosine_schedule, optax_with_master, tree_nbytes
+from example_utils import (
+    OPTIMIZERS,
+    get_jax_flash_opt,
+    init_metrics_file,
+    log_metrics,
+    make_warmup_cosine_schedule,
+    optax_with_master,
+    tree_nbytes,
+)
 from flash_attn_jax import flash_mha
 from flashoptim_jax import FlashOptimizer
 

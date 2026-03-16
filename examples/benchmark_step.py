@@ -11,7 +11,7 @@ import jax
 import jax.numpy as jnp
 import torch
 
-from benchmark_utils import (
+from example_utils import (
     OPTIMIZERS,
     WEIGHT_DTYPES,
     estimate_state_nbytes,
@@ -24,7 +24,7 @@ from benchmark_utils import (
     get_jax_baseline_opt,
     get_jax_flash_opt,
     get_torch_baseline_opt,
-    get_torch_flash_opt
+    get_torch_flash_opt,
 )
 
 
