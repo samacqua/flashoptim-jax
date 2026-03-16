@@ -16,8 +16,8 @@ Downloading data:
        fineweb_train_000001.bin ... fineweb_train_000103.bin, fineweb_val_000000.bin
 
 Usage:
-  python flashoptim_torch/examples/train_gpt2_pretrain.py --data-dir ~/data/fineweb10b-gpt2 --download
-  NCCL_NET=Socket torchrun --nproc_per_node=8 flashoptim_torch/examples/train_gpt2_pretrain.py --data-dir ~/data/fineweb10b-gpt2
+  python examples/torch/train_gpt2_pretrain.py --data-dir ~/data/fineweb10b-gpt2 --download
+  NCCL_NET=Socket torchrun --nproc_per_node=8 examples/torch/train_gpt2_pretrain.py --data-dir ~/data/fineweb10b-gpt2
 """
 
 from __future__ import annotations

@@ -1,6 +1,10 @@
-# JAX Flash
+# flashoptim-jax
 
-JAX implementation of [FlashOptim: Optimizers for Memory Efficient Training](https://arxiv.org/pdf/2602.23349).
+[![PyPI](https://img.shields.io/pypi/v/flashoptim-jax)](https://pypi.org/project/flashoptim-jax/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![arXiv](https://img.shields.io/badge/arXiv-2602.23349-b31b1b.svg)](https://arxiv.org/abs/2602.23349)
+
+JAX/Optax reimplementation of [FlashOptim: Optimizers for Memory Efficient Training](https://arxiv.org/abs/2602.23349) ([PyTorch original](https://github.com/databricks/flashoptim)).
 
 Fused kernels that match the speed of the standard optimizers by
 reducing memory > 2x for mixed precision training using Adam, SGD, or LION.
@@ -136,13 +140,27 @@ python examples/plot_benchmark_step_logs.py \
 
 ## Reproducing Figure 3
 
-To reproduce the FP32 reconstruction-error plot from `flashoptim.tex`, run:
+To reproduce the FP32 reconstruction-error plot from the paper, run:
 
 ```bash
 python examples/plot_reconstruction_error.py --output compression_comparison_jax.png
 ```
 
 ![FP32 Reconstruction Error Comparison](assets/compression_comparison_jax.png)
+
+## Citation
+
+This is an independent JAX/Optax reimplementation of [FlashOptim](https://github.com/databricks/flashoptim).
+If you use this software, please cite the original paper:
+
+```bibtex
+@article{gonzalezblalock2026flashoptim,
+  title={FlashOptim: Optimizers for Memory Efficient Training},
+  author={Gonzalez Ortiz, Jose Javier and Gupta, Abhay and Rinard, Christopher and Blalock, Davis},
+  journal={arXiv preprint arXiv:2602.23349},
+  year={2026}
+}
+```
 
 ## Next steps
 

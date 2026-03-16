@@ -7,7 +7,7 @@ export PYTHONWARNINGS=ignore
 export NCCL_NET=Socket
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-TORCH_ROOT_DIR="$ROOT_DIR/flashoptim_torch"
+TORCH_ROOT_DIR="$ROOT_DIR/examples/torch"
 source "$ROOT_DIR/.venv/bin/activate"
 
 usage() {
@@ -65,7 +65,7 @@ case "$benchmark" in
     ;;
   mnist)
     jax_script="$ROOT_DIR/examples/train_mnist.py"
-    torch_script="$TORCH_ROOT_DIR/examples/train_mnist.py"
+    torch_script="$TORCH_ROOT_DIR/train_mnist.py"
     subdir="mnist"
     : "${data_dir:=$ROOT_DIR/data/mnist}"
     optimizers=(adamw sgd lion)
@@ -77,7 +77,7 @@ case "$benchmark" in
     ;;
   imagenette|imagenet)
     jax_script="$ROOT_DIR/examples/train_imagenet.py"
-    torch_script="$TORCH_ROOT_DIR/examples/train_imagenet.py"
+    torch_script="$TORCH_ROOT_DIR/train_imagenet.py"
     subdir="imagenet"
     : "${data_dir:=$ROOT_DIR/data/imagenet/imagenette2-320}"
     optimizers=(adamw sgd lion)

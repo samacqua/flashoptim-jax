@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "JAX/Optax implementation of FlashOptim."
 readme = "README.md"
 requires-python = ">=3.10"
-license = "MIT"
+license = "Apache-2.0"
 authors = [{ name = "Sam Acquaviva" }]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -20,6 +20,7 @@ dependencies = [
 dev = [
     "jax[cuda12]",
     "matplotlib",
+    "flashoptim @ git+https://github.com/databricks/flashoptim.git@7f9a82b",
     "torch",
     "torchvision",
     "datasets",

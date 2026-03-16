@@ -1,6 +1,6 @@
 """Train a CNN on MNIST using FlashOptim (JAX).
 
-Mirrors the PyTorch example in `flashoptim_torch/examples/train_mnist.py`
+Mirrors the PyTorch example in `examples/torch/train_mnist.py`
 with a single configurable optimizer/implementation per run.
 """
 import argparse

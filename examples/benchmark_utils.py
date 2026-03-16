@@ -14,7 +14,7 @@ from flashoptim_jax import flash_adamw, flash_lion, flash_sgd, FlashOptimizer
 import sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "flashoptim_torch"))
+sys.path.insert(0, str(ROOT / "examples" / "torch"))
 
 from flashoptim import FlashAdamW as TorchFlashAdamW
 from flashoptim import FlashLion as TorchFlashLion
