@@ -3,8 +3,9 @@
 [![PyPI](https://img.shields.io/pypi/v/flashoptim-jax)](https://pypi.org/project/flashoptim-jax/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![arXiv](https://img.shields.io/badge/arXiv-2602.23349-b31b1b.svg)](https://arxiv.org/abs/2602.23349)
+[![Project Page](https://img.shields.io/badge/Project-Page-green)](https://samacquaviva.com/projects/flashoptim-jax/)
 
-JAX/Optax reimplementation of [FlashOptim: Optimizers for Memory Efficient Training](https://arxiv.org/abs/2602.23349) ([PyTorch original](https://github.com/databricks/flashoptim)).
+JAX/Optax reimplementation of [FlashOptim: Optimizers for Memory Efficient Training](https://arxiv.org/abs/2602.23349) ([PyTorch original](https://github.com/databricks/flashoptim)). See [project page](https://samacquaviva.com/projects/flashoptim-jax/) for writeup.
 
 Fused kernels that match the speed of the standard optimizers by
 reducing memory > 2x for mixed precision training using Adam, SGD, or LION.
